@@ -16,9 +16,18 @@ const [walletConnected,setWalletConnected]=useState(false);
 
 const web3ModalRef = useRef();
 
+const getProviderOrSigner=async(needSigner=false)=>{
+const provider = await web3ModalRef.current.connect();
+const web3Provider = new providers.Web3Provider(provider);
+const {chainId} = await web3Provider.getNetwork();
+if(chainId!==5){
+  window.alert("Please change the network to Goerli!");
+  throw new Error("Change the network to Goerli");
+}
+};
 const connectWallet = async()=>{
   try {
-
+    await getProviderOrSigner();
     setWalletConnected(true);
 
   } catch (err) {
