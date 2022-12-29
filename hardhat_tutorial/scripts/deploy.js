@@ -8,7 +8,7 @@ async function main() {
 const cryptoNFTContract = CRYPTO_NFT_CONTRACT_ADDRESS;
 const crpytoTokenContract = await ethers.getContractFactory("CryptoToken");
 
-const deployedCryptoContract = await crpytoTokenContract.deploy(cryptoNFTContract)
+const deployedCryptoContract = await crpytoTokenContract.deploy(cryptoNFTContract);
 await deployedCryptoContract.deployed();
 console.log("Crypto Token Contract Address: ",deployedCryptoContract.address);
 }

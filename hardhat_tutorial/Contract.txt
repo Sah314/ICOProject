@@ -1,1 +1,1 @@
-Crypto Token Contract Address:  0x1769B193f7cfb995775d6100e654cc9ce2f4400E
+Crypto Token Contract Address:  0x23FF7b08365e79746D6A57e58bfCe2f0cC8e2E4f
